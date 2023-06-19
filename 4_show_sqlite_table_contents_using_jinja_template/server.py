@@ -22,11 +22,11 @@ def index():
         temp_dictionary.update({ "brand" : row[1] })
         temp_dictionary.update({ "model" : row[2] })
         temp_dictionary.update({ "year_of_manufacturing" : row[3] })
-        temp_dictionary.update({ "price" : row[4] })
+        temp_dictionary.update({ "price" : int(row[4]) })
         temp_dictionary.update({ "car_or_bike" : row[5] })
         
         cars_and_bikes_list.append(temp_dictionary)
-        
+
     conn.close()
 
     return render_template('inventory.html', cars_and_bikes_list=cars_and_bikes_list)
