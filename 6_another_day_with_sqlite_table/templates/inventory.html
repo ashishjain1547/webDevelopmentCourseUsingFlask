@@ -1,0 +1,23 @@
+<table>
+    <tr>
+        <td>
+            Sno
+        </td>
+
+        <td>
+            year
+        </td>
+
+        <td>
+            Model
+    </tr>
+
+    {% for item in cars %}
+    <tr>
+        <td>{{ item['sno'] }}</td>
+        <td>{{ item['year'] }}</td>
+        <td>{{ item['model'] }}</td>
+
+    </tr>
+    {% endfor %}
+</table>

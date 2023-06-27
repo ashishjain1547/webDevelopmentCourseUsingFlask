@@ -1,0 +1,28 @@
+<table>
+    <tr>
+        <td>
+            Company Name
+        </td>
+
+        <td>
+            Headquarter
+        </td>
+
+        <td>
+            Founded in
+        </td>
+
+        <td>
+            Founder
+        </td>
+    </tr>
+
+    {% for item in car_companies %}
+    <tr>
+        <td>{{ item['company_name'] }}</td>
+        <td>{{ item['headquarter'] }}</td>
+        <td>{{ item['founded_in'] }}</td>
+        <td>{{ item['founder'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
