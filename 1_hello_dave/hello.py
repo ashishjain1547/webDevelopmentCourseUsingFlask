@@ -1,4 +1,6 @@
 from flask import Flask # Importing the class 'Flask'
+from flask import Response
+import json 
 
 app = Flask(__name__) # Initializing a Flask application
 
@@ -12,6 +14,23 @@ def index():
 @app.route('/user/<name>')
 def user(name):
     return '<h1>Hello, {}!</h1>'.format(name)
+
+
+@app.route('/test_json', methods=['POST'])
+def test_json():
+    o = [
+        {
+            "first_name": "Vaibhav",
+            "last_name": "Deshmukh"
+        },
+
+        {
+            "first_name": "Ashish",
+            "last_name": "Jain"
+        }
+    ]
+    return Response(json.dumps(o), status=201, mimetype='application/json')
+
 
 if __name__ == '__main__':
     app.run(port='5000')

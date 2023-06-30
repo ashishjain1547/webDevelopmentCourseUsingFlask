@@ -1,0 +1,44 @@
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<table class="table table-striped">
+    <tr>
+        <td>
+            Sno
+        </td>
+
+        <td>
+            Brand
+        </td>
+
+        <td>
+            Model
+        </td>
+
+        <td>
+            Year of Manufacturing
+        </td>
+
+        <td>
+            Price
+        </td>
+
+        <td>
+            Car or Bike
+        </td>
+    </tr>
+
+    {% for item in cars_and_bikes_list %}
+    <tr>
+        <td>{{ item['sno'] }}</td>
+        <td>{{ item['brand'] }}</td>
+        <td>{{ item['model'] }}</td>
+        <td>{{ item['year_of_manufacturing'] }}</td>
+        <td>{{ item['price'] }}</td>
+        <td>{{ item['car_or_bike'] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

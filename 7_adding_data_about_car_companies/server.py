@@ -5,9 +5,26 @@ app = Flask(__name__)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
 
+
+# This is the landing page to the site.
+# Upon landing here, the user will see a form.
+# If you would open and see in form.html, there is this piece of string present:
+# <form action="http://127.0.0.1:9000/insert_record" method="POST" enctype="multipart/form-data">
+# This tells the once the form is submitted, it has to be processed by "insert_record" handle (in server.py file).
+# Inside "insert_record" function, we read different inputs coming as part of request. 
+# And pass these different inputs as arguments to the next function to form an SQL query and execute it.
+# 
+# When a request comes, it has a source. When it was coming on click of a link, submission of a form, or an AJAX request. 
+#
+# The next function to form an SQL query is: insert_into_car_company
+# After a record in inserted, we want to show a message to the user. 
+# This message appears on template "form_response.html".
+
+
 @app.route('/')
 def index():
     return render_template('form.html')
+
 
 @app.route("/insert_record", methods=['POST'])
 def insert_record():
@@ -49,7 +66,7 @@ def insert_into_car_company(company_name, headquarter, founded_in, founder):
         count = cursor.execute(sqlite_insert_query)
         sqliteConnection.commit()
 
-        print("Record inserted successfully into SqliteDb_developers table ", cursor.rowcount)
+        print("Record inserted successfully into table ", cursor.rowcount)
         
         cursor.close()
 
