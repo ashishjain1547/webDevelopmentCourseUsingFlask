@@ -1,53 +1,84 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <style>
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-    </style>
+  <title>Monthly Savings</title>
+  <style>
+    body {
+      background-color: #3778C2;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3778C2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #1E416F;
+    }
+
+    .customImgWrapper {
+      float: right;
+    }
+
+  </style>
 </head>
 
 <body>
-    <div id="essay">
-        <h1>Monthly Savings</h1>
 
-        Is it important to save? Yes. Why?
+  <div class="customImgWrapper"> 
+    <img src="image-removebg-preview.png" alt="">
+    <img src="money.gif" alt="">
+  </div>
 
-        <br>
-
-        <ul>
-            <li>So that after you retire you can that money.</li>
-            <li>So that you can use it in emergency.</li>
-            <li>So that you can spend it on your children's expenses.</li>
-        </ul>
-    </div>
-
-    <table>
-        <tr>
-            <th>Month</th>
-            <th>Savings</th>
-        </tr>
-
-        <tr>
-            <td>January</td>
-            <td>$100</td>
-        </tr>
-
-        <tr>
-            <td>February</td>
-            <td>$80</td>
-        </tr>
-
-        <tr>
-            <td>March</td>
-            <td>$85</td>
-        </tr>
-    </table>
-
+  <h1>Monthly Savings</h1>
+  <p>Is it important to save? Yes. Why?</p>
+  <ul>
+    <li>So that after you retire you can have that money.</li>
+    <li>So that you can use it in emergencies.</li>
+    <li>So that you can spend it on your children's expenses.</li>
+    <li>Set one specific goal. Rather than socking away money into a savings account, set specific goals for your
+      savings.</li>
+  </ul>
+  <h1>How to save money?</h1>
+  <ul>
+    <li>Budget for savings.</li>
+    <li>Make saving automatic.</li>
+    <li>Keep separate accounts.</li>
+    <li>Monitor & watch it grow.</li>
+  </ul>
+  <table>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+    <tr>
+      <td>March</td>
+      <td>$85</td>
+    </tr>
+  </table>
 </body>
 
 </html>
