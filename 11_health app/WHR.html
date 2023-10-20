@@ -1,0 +1,70 @@
+<html>
+<head>    
+<title>WHR</title>
+    <style>  
+    body {
+        background-color: #3778C2;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+  
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+  
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+  
+    th {
+        background-color: #69a1e1;
+    }
+  
+    tr:nth-child(even) {
+        background-color: #355b8c;
+    }
+    img{
+        width: 600px;
+        height: 300px;
+    }
+    .problems{
+        text-align: left;
+    }
+    button {
+      background-color: #355b8c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }    
+    </style>
+</head>
+    <body>
+        <h1>WHR</h1>
+        <form>
+            <label for="waist">waist:</label><br>
+            <input type="text" id="waist" name="waist"><br><br>
+            <label for="hip">hip:</label><br>
+            <input type="text" id="hip" name="hip"><br>
+        </form>
+        <input type="radio" id="Male" name="Male" value="Male" checked>
+        <label for="Male">Male </label><br>
+        <input type="radio" id="Female" name="Female" value="Female">
+        <label for="adult">Female</label><br><br>
+        <button class="button" id="Caliculate">Caliculate WHR</button> 
+        <button class="button" id="redirectButton">Home Page</button><br><br>
+        <img src="WHR_image.png" id="WHR_image">
+        <script>
+            document.getElementById("redirectButton").addEventListener("click", function() {
+              window.location.href = "Health app.html";
+            });
+        </script> 
+    </body> 
+</html> 
+  

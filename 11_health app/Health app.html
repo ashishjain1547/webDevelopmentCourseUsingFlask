@@ -1,0 +1,57 @@
+<html>
+<head>    
+<title>Health</title>
+    <style>  
+    body {
+        background-color: #3778C2;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+  
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+  
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+  
+    th {
+        background-color: #69a1e1;
+    }
+  
+    tr:nth-child(even) {
+        background-color: #355b8c;
+    }
+    button {
+      background-color: #355b8c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }    
+    </style>
+</head>
+    <body>
+        <h1>Your Health Web</h1>
+        <button class="button" id="redirectButton">BMI</button>
+        <script>
+            document.getElementById("redirectButton").addEventListener("click", function() {
+              window.location.href = "BMI.html";
+            });
+        </script>    
+        <button class="button" id="redirectButton2">WHR</button>
+        <script>    
+            document.getElementById("redirectButton2").addEventListener("click", function() {
+              window.location.href = "WHR.html";
+            });    
+        </script>      
+    </body> 
+</html> 
+  
